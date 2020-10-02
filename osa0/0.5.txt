@@ -1,0 +1,20 @@
+
+Sekvenssikaavio SPA sivun latauksesta
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin-->selain: spa HTML-koodi
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: main.css
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+palvelin-->selain: spa.js
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: data.json
+
+-Lisäksi viimeisenä tehdään jostain syystä seuraava pyyntö:
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+palvelin-->selain: "Course stats"-linkki jota ei kuitenkaan ladatulla sivulla näy
+
+-kaikki tarvittava data on nyt selaimella ja se renderöi sivun näytölle
