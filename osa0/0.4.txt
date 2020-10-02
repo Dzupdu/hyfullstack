@@ -1,10 +1,10 @@
 
-Sekvenssikaavio alkaen "save" napin painamisesta
+Sekvenssikaavio uuden muistiinpanon tekemisestä (alkaen save napin painalluksesta)
 
 selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
 palvelin-->selain: redirect-pyyntö
 
--Palvelin tallentaa uuden noten ja tekee uudelleenohjauspyynnön selaimelle
+-Palvelin tallentaa uuden muistiinpanon ja tekee uudelleenohjauspyynnön selaimelle
 
 selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 palvelin-->selain: HTML-koodi
@@ -17,7 +17,7 @@ palvelin-->selain: data.json
 selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
 palvelin-->selain: "Course stats"-linkki jota ei kuitenkaan ladatulla sivulla näy
 
--kaikki tarvittava data on nyt selaimella ja se renderöi sivun näytölle
+-kaikki tarvittava data on nyt selaimella ja se renderöi päivitetyn listan näytölle
 
 
 
