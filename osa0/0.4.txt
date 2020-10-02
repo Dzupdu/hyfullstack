@@ -1,0 +1,23 @@
+
+Sekvenssikaavio alkaen "save" napin painamisesta
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+palvelin-->selain: redirect-pyyntö
+
+-Palvelin tallentaa uuden noten ja tekee uudelleenohjauspyynnön selaimelle
+
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+palvelin-->selain: HTML-koodi
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+palvelin-->selain: main.js
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/mdata.json
+palvelin-->selain: data.json
+
+-Lisäksi viimeisenä tehdään jostain syystä seuraava pyyntö:
+selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/favicon.ico
+palvelin-->selain: "Course stats"-linkki jota ei kuitenkaan ladatulla sivulla näy
+
+-kaikki tarvittava data on nyt selaimella ja se renderöi sivun näytölle
+
+
+
