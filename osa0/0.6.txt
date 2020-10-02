@@ -1,0 +1,8 @@
+Sekvenssikaavio uuden muistiinpanon tekemisestä sovelluksen SPA versiossa (alkaen save napin painalluksesta)
+
+selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+-Palvelin tallentaa uuden muistiinpanon , mutta tällä kertaa redirect pyyntöä ei tehdä vaan tieto uudesta merkinnästä tallennetaan myös selaimeen.
+-Tällöin uusi sivu muistiinpano näkyy sivulla eikä ylimääräisiä GET pyyntöjä tarvitse tehdä
+
+-kaikki tarvittava data on  selaimella ja se renderöi sivun näytölle
